@@ -37,15 +37,16 @@ understand where their money is going.
 **Why this priority**: After capturing expenses, the main value is in being able to review spending patterns and totals
 without needing to export data or use another tool.
 
-**Independent Test**: With several expenses already recorded, a person can open the dashboard and clearly see a list of
-recent expenses and an accurate total for a selected period, without needing to add or delete any new expenses.
+**Independent Test**: With several expenses already recorded, a person can open the dashboard, choose a date range, and
+clearly see a list of recent expenses and an accurate total for that selected period, without needing to add or delete
+any new expenses.
 
 **Acceptance Scenarios**:
 
-1. **Given** the person has multiple expenses recorded, **When** they open the dashboard, **Then** they see a list of
-   recent expenses showing amount, date, category, and description.
-2. **Given** the person is viewing the dashboard, **When** they look at the total for the current period, **Then** the
-   total accurately reflects the sum of all expenses included in that period.
+1. **Given** the person has multiple expenses recorded, **When** they open the dashboard and select a date range,
+   **Then** they see a list of recent expenses within that range, showing amount, date, category, and description.
+2. **Given** the person is viewing the dashboard and has selected a date range, **When** they look at the total for that
+   selected range, **Then** the total accurately reflects the sum of all expenses included in that range.
 
 ---
 
@@ -91,8 +92,8 @@ define the initial scope.
   the same device.
 - **FR-004**: The system MUST display a list of recent expenses showing at least amount, date, category, and
   description.
-- **FR-005**: The system MUST calculate and display total spending over at least one default period (for example, the
-  current month) and SHOULD make it clear which period is being summarized.
+- **FR-005**: The system MUST allow the person to choose a date range and MUST calculate and display total spending for
+  that selected period, making it clear which period is being summarized.
 - **FR-006**: The system MUST allow the person to delete an existing expense and immediately remove it from the list and
   from any totals.
 - **FR-007**: The system MUST operate as a personal tracker only and MUST NOT require the person to create an account or
@@ -120,3 +121,10 @@ define the initial scope.
   and delete an expense without needing instructions.
 - **SC-004**: For a typical personal usage pattern (hundreds of expenses), the dashboard list and totals load in a way
   that feels immediate to the person (no noticeable delay that breaks their focus).
+
+## Clarifications
+
+### Session 2025-11-30
+
+- Q: What should be the default period for “recent expenses” and totals on the dashboard? → A: Always require the person
+  to choose a custom date range before showing totals.
