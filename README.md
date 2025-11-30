@@ -31,6 +31,8 @@ look at all the core components of this `workflow`.
 
 # Core workflow components overview
 
+![Alt text](./spec-kit-workflow.png)
+
 - /constitution (project principles and standards):
 
   This is usually setup at the very start of your project and this is where you
