@@ -17,21 +17,32 @@
   the iteration process.
 -->
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: TypeScript (strict) with Next.js App Router [confirm or NEEDS CLARIFICATION if deviating]  
+**Primary Dependencies**: Next.js, React, Tailwind CSS, Zod [extend with feature-specific libraries or mark NEEDS CLARIFICATION]  
+**Storage**: [e.g., PostgreSQL, SQLite, external API, or N/A — MUST be explicitly stated for features that touch data]  
+**Testing**: [e.g., Jest, Testing Library, Playwright or NEEDS CLARIFICATION]  
+**Target Platform**: Web application (Next.js)  
+**Project Type**: Web app (Expense Tracker)  
+**Performance Goals**: [domain-specific, e.g., dashboard load under X ms, filters apply under Y ms, or NEEDS CLARIFICATION]  
+**Constraints**: [domain-specific, e.g., <200ms p95 for key flows, <100MB memory, offline-capable sections, or NEEDS CLARIFICATION]  
+**Scale/Scope**: [domain-specific, e.g., number of users, volume of expenses, number of concurrent sessions or NEEDS CLARIFICATION]
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Technology Stack & Architecture**: Confirms feature uses Next.js App Router, TypeScript (strict), Tailwind CSS, React
+  Server Components for data fetching, and Server Actions for mutations unless a justified exception is documented.
+- **Coding Standards & Validation**: Confirms functional arrow components, naming conventions, no `any` types, and Zod
+  validation for all external inputs and Server Actions.
+- **UI/UX & Accessibility**: Confirms mobile-first responsive design, semantic HTML, keyboard accessibility, and clear
+  loading/success/error feedback for all async flows.
+- **Testing & Quality**: Confirms unit tests for complex logic, appropriate use of Next.js error boundaries, and that
+  quality gates (type-checking, linting, tests as required) are planned.
+- **Documentation & Spec Compliance**: Confirms the feature spec, plan, and tasks remain the source of truth and will be
+  updated when implementation details change.
+
+If any gate cannot be satisfied, the violation MUST be recorded with rationale and follow-up tasks in the plan.
 
 ## Project Structure
 
