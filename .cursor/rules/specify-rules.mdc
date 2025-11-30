@@ -1,0 +1,29 @@
+# spec-kit Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2025-11-30
+
+## Active Technologies
+
+- TypeScript (strict) with Next.js App Router + Next.js, React, Tailwind CSS, Zod, React Hook Form (for forms) (001-expense-tracker)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+npm test && npm run lint
+
+## Code Style
+
+TypeScript (strict) with Next.js App Router: Follow standard conventions
+
+## Recent Changes
+
+- 001-expense-tracker: Added TypeScript (strict) with Next.js App Router + Next.js, React, Tailwind CSS, Zod, React Hook Form (for forms)
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->
