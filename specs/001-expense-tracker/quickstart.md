@@ -30,17 +30,20 @@ is required.
    ```
 
 3. Open the app in a browser (default `http://localhost:3000`) and navigate to the expenses dashboard route
-   (for example, `/expenses`) once implemented.
+   at `/expenses`.
 
 ## Core flows to test
 
 1. **Add an expense**
+
    - Open the expenses dashboard.
    - Fill in amount, date, category, and description.
    - Submit and verify the expense appears in the list for the currently selected date range.
 
 2. **View totals for a date range**
+
    - Select a date range that includes several expenses.
+   - Apply the range.
    - Confirm that the list shows only expenses within that range.
    - Confirm that the total matches the sum of the visible expenses.
 
@@ -54,5 +57,3 @@ is required.
   browsers/devices will remove or hide existing data.
 - There is no authentication; this is intentionally a personal tracker.
 - The UI should remain usable and feel fast for up to a few thousand expenses per person.
-
-

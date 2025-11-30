@@ -31,11 +31,11 @@ and appropriate error handling; implementers MUST include tests as part of the i
 
 **Purpose**: Project initialization and basic structure for the expense tracker feature.
 
-- [ ] T001 Create `app/expenses/page.tsx` route and basic layout shell wired into `app/layout.tsx`
-- [ ] T002 Create feature folder structure under `features/expenses/` (`components/`, `lib/`, `schemas/`, `types/`)
-- [ ] T003 Create `server/expenses/` folder for server-only logic (`actions.ts`, `mappers.ts`)
-- [ ] T004 [P] Ensure Tailwind CSS is configured and available for `app/expenses/page.tsx`
-- [ ] T005 [P] Configure TypeScript settings (strict mode) to support `features/expenses` and `server/expenses` paths
+- [x] T001 Create `app/expenses/page.tsx` route and basic layout shell wired into `app/layout.tsx`
+- [x] T002 Create feature folder structure under `features/expenses/` (`components/`, `lib/`, `schemas/`, `types/`)
+- [x] T003 Create `server/expenses/` folder for server-only logic (`actions.ts`, `mappers.ts`)
+- [x] T004 [P] Ensure Tailwind CSS is configured and available for `app/expenses/page.tsx`
+- [x] T005 [P] Configure TypeScript settings (strict mode) to support `features/expenses` and `server/expenses` paths
 
 ---
 
@@ -44,12 +44,12 @@ and appropriate error handling; implementers MUST include tests as part of the i
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented.  
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T006 Define `Expense` and related types in `features/expenses/types/expense.ts` based on `data-model.md`
-- [ ] T007 Define Zod schemas for `Expense` and `DateRangeSelection` in `features/expenses/schemas/expense.schema.ts`
-- [ ] T008 Implement pure helper functions for adding, deleting, and summarizing expenses in `features/expenses/lib/expenses-utils.ts`
-- [ ] T009 Implement client-side `localStorage` helpers in `features/expenses/lib/expenses-client.ts` (load, save, reset)
-- [ ] T010 Implement Next.js Server Actions for add/delete/summary in `server/expenses/actions.ts` using Zod validation and `expenses-utils`
-- [ ] T011 [P] Add `app/expenses/error.tsx` to handle route-level errors for the expenses dashboard
+- [x] T006 Define `Expense` and related types in `features/expenses/types/expense.ts` based on `data-model.md`
+- [x] T007 Define Zod schemas for `Expense` and `DateRangeSelection` in `features/expenses/schemas/expense.schema.ts`
+- [x] T008 Implement pure helper functions for adding, deleting, and summarizing expenses in `features/expenses/lib/expenses-utils.ts`
+- [x] T009 Implement client-side `localStorage` helpers in `features/expenses/lib/expenses-client.ts` (load, save, reset)
+- [x] T010 Implement Next.js Server Actions for add/delete/summary in `server/expenses/actions.ts` using Zod validation and `expenses-utils`
+- [x] T011 [P] Add `app/expenses/error.tsx` to handle route-level errors for the expenses dashboard
 
 **Checkpoint**: Foundation ready – user story implementation can now begin in parallel.
 
@@ -64,12 +64,12 @@ expected values and included in totals (once User Story 2 is implemented), witho
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Implement `ExpenseForm.tsx` in `features/expenses/components/ExpenseForm.tsx` using React Hook Form and Zod schemas
-- [ ] T013 [P] [US1] Wire `ExpenseForm` into `app/expenses/page.tsx` so the form renders on the dashboard page
-- [ ] T014 [US1] Connect `ExpenseForm` submit handler to `addExpense` Server Action in `server/expenses/actions.ts`
-- [ ] T015 [US1] On successful add, update client-side expenses via `features/expenses/lib/expenses-client.ts` and refresh the visible list
-- [ ] T016 [P] [US1] Implement inline validation and error messages in `ExpenseForm.tsx` for invalid amount, date, or missing category
-- [ ] T017 [US1] Provide user feedback (e.g., disabled submit + spinner and success/error toast or inline message) for add expense flow
+- [x] T012 [P] [US1] Implement `ExpenseForm.tsx` in `features/expenses/components/ExpenseForm.tsx` using React Hook Form and Zod schemas
+- [x] T013 [P] [US1] Wire `ExpenseForm` into `app/expenses/page.tsx` so the form renders on the dashboard page
+- [x] T014 [US1] Connect `ExpenseForm` submit handler to `addExpense` Server Action in `server/expenses/actions.ts`
+- [x] T015 [US1] On successful add, update client-side expenses via `features/expenses/lib/expenses-client.ts` and refresh the visible list
+- [x] T016 [P] [US1] Implement inline validation and error messages in `ExpenseForm.tsx` for invalid amount, date, or missing category
+- [x] T017 [US1] Provide user feedback (e.g., disabled submit + spinner and success/error toast or inline message) for add expense flow
 
 **Checkpoint**: At this point, User Story 1 (add expense) should be fully functional and testable independently (form
 submits, validation works, new items appear in the in-memory/client-side list).
@@ -85,12 +85,12 @@ only expenses in that range, and see the total accurately reflect those expenses
 
 ### Implementation for User Story 2
 
-- [ ] T018 [P] [US2] Implement `TotalsSummary.tsx` in `features/expenses/components/TotalsSummary.tsx` to display totals and current date range
-- [ ] T019 [P] [US2] Implement date range selection UI (from/to controls) in `app/expenses/page.tsx` or a dedicated filter component under `features/expenses/components/`
-- [ ] T020 [US2] Wire date range selection to call `getDashboardSummary` logic in `server/expenses/actions.ts` (or via `expenses-utils`) using current expenses from `localStorage`
-- [ ] T021 [US2] Implement `ExpenseList.tsx` in `features/expenses/components/ExpenseList.tsx` to render expenses for the selected date range
-- [ ] T022 [US2] Integrate `ExpenseList` and `TotalsSummary` into `app/expenses/page.tsx` so they update when the date range changes
-- [ ] T023 [US2] Ensure empty states are handled gracefully (no expenses in range, or no expenses at all) with clear messaging
+- [x] T018 [P] [US2] Implement `TotalsSummary.tsx` in `features/expenses/components/TotalsSummary.tsx` to display totals and current date range
+- [x] T019 [P] [US2] Implement date range selection UI (from/to controls) in `app/expenses/page.tsx` or a dedicated filter component under `features/expenses/components/`
+- [x] T020 [US2] Wire date range selection to call `getDashboardSummary` logic in `server/expenses/actions.ts` (or via `expenses-utils`) using current expenses from `localStorage`
+- [x] T021 [US2] Implement `ExpenseList.tsx` in `features/expenses/components/ExpenseList.tsx` to render expenses for the selected date range
+- [x] T022 [US2] Integrate `ExpenseList` and `TotalsSummary` into `app/expenses/page.tsx` so they update when the date range changes
+- [x] T023 [US2] Ensure empty states are handled gracefully (no expenses in range, or no expenses at all) with clear messaging
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently: a person can add expenses and then
 review them and the totals for any chosen date range.
@@ -106,11 +106,11 @@ disappear and no longer be counted in totals, without needing to add or edit any
 
 ### Implementation for User Story 3
 
-- [ ] T024 [P] [US3] Add delete controls (e.g., delete button) to each expense row in `features/expenses/components/ExpenseList.tsx`
-- [ ] T025 [US3] Wire delete controls to the `deleteExpense` Server Action in `server/expenses/actions.ts`
-- [ ] T026 [US3] After a successful delete, update `localStorage` via `features/expenses/lib/expenses-client.ts` and refresh the list and totals
-- [ ] T027 [US3] Implement a confirmation step (e.g., confirm dialog or “are you sure?” UI) before permanently deleting an expense
-- [ ] T028 [US3] Handle attempted deletion of already-removed or unknown expenses gracefully (e.g., show a friendly message and refresh)
+- [x] T024 [P] [US3] Add delete controls (e.g., delete button) to each expense row in `features/expenses/components/ExpenseList.tsx`
+- [x] T025 [US3] Wire delete controls to the `deleteExpense` Server Action in `server/expenses/actions.ts`
+- [x] T026 [US3] After a successful delete, update `localStorage` via `features/expenses/lib/expenses-client.ts` and refresh the list and totals
+- [x] T027 [US3] Implement a confirmation step (e.g., confirm dialog or “are you sure?” UI) before permanently deleting an expense
+- [x] T028 [US3] Handle attempted deletion of already-removed or unknown expenses gracefully (e.g., show a friendly message and refresh)
 
 **Checkpoint**: At this point, User Stories 1, 2, and 3 should all be independently functional and testable.
 
@@ -120,12 +120,12 @@ disappear and no longer be counted in totals, without needing to add or edit any
 
 **Purpose**: Improvements that affect multiple user stories.
 
-- [ ] T029 [P] Review and refine Tailwind styling for `ExpenseForm`, `ExpenseList`, and `TotalsSummary` for mobile-first responsiveness
-- [ ] T030 Improve accessibility (focus management, ARIA labels, keyboard interactions) across expenses UI components in `features/expenses/components/`
-- [ ] T031 Add logging and error handling improvements around Server Actions in `server/expenses/actions.ts`
-- [ ] T032 [P] Add unit tests for `features/expenses/lib/expenses-utils.ts` (calculations, filtering, date range handling)
-- [ ] T033 [P] Add minimal end-to-end tests for add/view/delete flows in `tests/expenses/e2e/expenses.e2e.test.ts`
-- [ ] T034 Validate that `quickstart.md` instructions are accurate and update as needed
+- [x] T029 [P] Review and refine Tailwind styling for `ExpenseForm`, `ExpenseList`, and `TotalsSummary` for mobile-first responsiveness
+- [x] T030 Improve accessibility (focus management, ARIA labels, keyboard interactions) across expenses UI components in `features/expenses/components/`
+- [x] T031 Add logging and error handling improvements around Server Actions in `server/expenses/actions.ts`
+- [x] T032 [P] Add unit tests for `features/expenses/lib/expenses-utils.ts` (calculations, filtering, date range handling)
+- [x] T033 [P] Add minimal end-to-end tests for add/view/delete flows in `tests/expenses/e2e/expenses.e2e.test.ts`
+- [x] T034 Validate that `quickstart.md` instructions are accurate and update as needed
 
 ---
 
